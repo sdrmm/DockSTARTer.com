@@ -2,107 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://dockstarter.com/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Advanced-Usage/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Migration/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Frequently-Asked-Questions/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/AirDCpp/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/ddclient/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/DelugeVPN/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Duplicati/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Home-Assistant/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Let's-Encrypt-(Certbot)/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Logarr/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Netdata/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/NextCloud/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Ouroboros/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Pi‐hole/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Plex/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Portainer/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Samba/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/Watchtower/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/SMB-Mounting/</loc>
-     <lastmod>2019-05-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/VPN-Information/</loc>
-     <lastmod>2019-05-03</lastmod>
+     <lastmod>2019-05-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -111,33 +11,148 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://dockstarter.com/Advanced-Usage/</loc>
-     <lastmod>2019-05-03</lastmod>
+     <loc>https://dockstarter.com/basics/available-apps/</loc>
+     <lastmod>2019-05-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://dockstarter.com/Available-Applications/</loc>
-     <lastmod>2019-05-03</lastmod>
+     <loc>https://dockstarter.com/basics/migration/</loc>
+     <lastmod>2019-05-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://dockstarter.com/Backups/</loc>
-     <lastmod>2019-05-03</lastmod>
+     <loc>https://dockstarter.com/basics/faq/</loc>
+     <lastmod>2019-05-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://dockstarter.com/Overrides/</loc>
-     <lastmod>2019-05-03</lastmod>
+     <loc>https://dockstarter.com/basics/port-conflicts/</loc>
+     <lastmod>2019-05-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://dockstarter.com/Setting-Up-a-Domain/</loc>
-     <lastmod>2019-05-03</lastmod>
+     <loc>https://dockstarter.com/apps/airdcpp/</loc>
+     <lastmod>2019-05-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://dockstarter.com/Technical-Info/</loc>
-     <lastmod>2019-05-03</lastmod>
+     <loc>https://dockstarter.com/apps/bitwarden/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/ddclient/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/delugevpn/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/duplicati/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/homeassistant/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/letsencrypt/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/logarr/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/netdata/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/nextcloud/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/openvpnas/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/ouroboros/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/pihole/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/plex/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/portainer/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/samba/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/watchtower/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/advanced-usage/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/backups/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/overrides/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/domain-info/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/smb-mounting/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/technical-info/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/vpn-info/</loc>
+     <lastmod>2019-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/uninstall/</loc>
+     <lastmod>2019-05-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

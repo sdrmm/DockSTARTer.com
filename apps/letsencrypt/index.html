@@ -13,7 +13,7 @@
         <meta name="description" content="DockSTARTer helps you get started with home server apps running in Docker.">
       
       
-        <link rel="canonical" href="https://dockstarter.com/">
+        <link rel="canonical" href="https://dockstarter.com/apps/letsencrypt/">
       
       
         <meta name="author" content="GhostWriters">
@@ -37,18 +37,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="img/favicon.ico">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
     
     
       
-        <title>DockSTARTer</title>
+        <title>Let's Encrypt (Certbot) - DockSTARTer</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.750b69bd.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.750b69bd.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
       
       
         
@@ -57,7 +57,7 @@
       
     
     
-      <script src="assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -66,7 +66,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
@@ -108,7 +108,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#getting-started" tabindex="1" class="md-skip">
+      <a href="#general-setup" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -119,7 +119,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://dockstarter.com" title="DockSTARTer" class="md-header-nav__button md-logo">
           
-            <img src="img/icon.png" width="24" height="24">
+            <img src="../../img/icon.png" width="24" height="24">
           
         </a>
       </div>
@@ -133,7 +133,7 @@
               DockSTARTer
             </span>
             <span class="md-header-nav__topic">
-              Home
+              Let's Encrypt (Certbot)
             </span>
           
         </div>
@@ -209,7 +209,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://dockstarter.com" title="DockSTARTer" class="md-nav__button md-logo">
       
-        <img src="img/icon.png" width="48" height="48">
+        <img src="../../img/icon.png" width="48" height="48">
       
     </a>
     DockSTARTer
@@ -241,56 +241,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Home
-      </label>
-    
-    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#one-time-setup-required" title="One Time Setup (required)" class="md-nav__link">
-    One Time Setup (required)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-dockstarter" title="Running DockSTARTer" class="md-nav__link">
-    Running DockSTARTer
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -331,7 +286,7 @@
 
 
   <li class="md-nav__item">
-    <a href="basics/available-apps/" title="Available Applications" class="md-nav__link">
+    <a href="../../basics/available-apps/" title="Available Applications" class="md-nav__link">
       Available Applications
     </a>
   </li>
@@ -343,7 +298,7 @@
 
 
   <li class="md-nav__item">
-    <a href="basics/migration/" title="How to Migrate to DS" class="md-nav__link">
+    <a href="../../basics/migration/" title="How to Migrate to DS" class="md-nav__link">
       How to Migrate to DS
     </a>
   </li>
@@ -355,7 +310,7 @@
 
 
   <li class="md-nav__item">
-    <a href="basics/faq/" title="Frequently Asked Questions" class="md-nav__link">
+    <a href="../../basics/faq/" title="Frequently Asked Questions" class="md-nav__link">
       Frequently Asked Questions
     </a>
   </li>
@@ -367,7 +322,7 @@
 
 
   <li class="md-nav__item">
-    <a href="basics/port-conflicts/" title="Port Conflicts" class="md-nav__link">
+    <a href="../../basics/port-conflicts/" title="Port Conflicts" class="md-nav__link">
       Port Conflicts
     </a>
   </li>
@@ -382,10 +337,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       App Specifics
@@ -403,7 +360,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/airdcpp/" title="AirDCpp" class="md-nav__link">
+    <a href="../airdcpp/" title="AirDCpp" class="md-nav__link">
       AirDCpp
     </a>
   </li>
@@ -415,7 +372,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/bitwarden/" title="BitWarden" class="md-nav__link">
+    <a href="../bitwarden/" title="BitWarden" class="md-nav__link">
       BitWarden
     </a>
   </li>
@@ -427,7 +384,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/ddclient/" title="ddclient" class="md-nav__link">
+    <a href="../ddclient/" title="ddclient" class="md-nav__link">
       ddclient
     </a>
   </li>
@@ -439,7 +396,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/delugevpn/" title="DelugeVPN" class="md-nav__link">
+    <a href="../delugevpn/" title="DelugeVPN" class="md-nav__link">
       DelugeVPN
     </a>
   </li>
@@ -451,7 +408,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/duplicati/" title="Duplicati" class="md-nav__link">
+    <a href="../duplicati/" title="Duplicati" class="md-nav__link">
       Duplicati
     </a>
   </li>
@@ -463,7 +420,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/homeassistant/" title="Home Assistant" class="md-nav__link">
+    <a href="../homeassistant/" title="Home Assistant" class="md-nav__link">
       Home Assistant
     </a>
   </li>
@@ -473,11 +430,73 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="apps/letsencrypt/" title="Let's Encrypt (Certbot)" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Let's Encrypt (Certbot)
+      </label>
+    
+    <a href="./" title="Let's Encrypt (Certbot)" class="md-nav__link md-nav__link--active">
       Let's Encrypt (Certbot)
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-setup" title="General Setup" class="md-nav__link">
+    General Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2" title="Part 2" class="md-nav__link">
+    Part 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-does-my-letsencrypt-proxy-configuration-for-insert-app-here-say-one-port-but-i-have-to-access-it-with-another-port" title="Why does my LetsEncrypt proxy configuration for (insert app here) say one port, but I have to access it with another port?" class="md-nav__link">
+    Why does my LetsEncrypt proxy configuration for (insert app here) say one port, but I have to access it with another port?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-automatically-make-http-calls-redirect-to-https-for-letsencrypt" title="How do i automatically make http calls redirect to https for letsencrypt?" class="md-nav__link">
+    How do i automatically make http calls redirect to https for letsencrypt?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-redirect-the-main-indexhtml-page-to-organizr" title="How do i redirect the main index.html page to organizr?" class="md-nav__link">
+    How do i redirect the main index.html page to organizr?
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -487,7 +506,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/logarr/" title="Logarr" class="md-nav__link">
+    <a href="../logarr/" title="Logarr" class="md-nav__link">
       Logarr
     </a>
   </li>
@@ -499,7 +518,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/netdata/" title="Netdata" class="md-nav__link">
+    <a href="../netdata/" title="Netdata" class="md-nav__link">
       Netdata
     </a>
   </li>
@@ -511,7 +530,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/nextcloud/" title="NextCloud" class="md-nav__link">
+    <a href="../nextcloud/" title="NextCloud" class="md-nav__link">
       NextCloud
     </a>
   </li>
@@ -523,7 +542,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/openvpnas/" title="OpenVPN-AS" class="md-nav__link">
+    <a href="../openvpnas/" title="OpenVPN-AS" class="md-nav__link">
       OpenVPN-AS
     </a>
   </li>
@@ -535,7 +554,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/ouroboros/" title="Ouroboros" class="md-nav__link">
+    <a href="../ouroboros/" title="Ouroboros" class="md-nav__link">
       Ouroboros
     </a>
   </li>
@@ -547,7 +566,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/pihole/" title="Pi-hole" class="md-nav__link">
+    <a href="../pihole/" title="Pi-hole" class="md-nav__link">
       Pi-hole
     </a>
   </li>
@@ -559,7 +578,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/plex/" title="Plex" class="md-nav__link">
+    <a href="../plex/" title="Plex" class="md-nav__link">
       Plex
     </a>
   </li>
@@ -571,7 +590,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/portainer/" title="Portainer" class="md-nav__link">
+    <a href="../portainer/" title="Portainer" class="md-nav__link">
       Portainer
     </a>
   </li>
@@ -583,7 +602,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/samba/" title="Samba" class="md-nav__link">
+    <a href="../samba/" title="Samba" class="md-nav__link">
       Samba
     </a>
   </li>
@@ -595,7 +614,7 @@
 
 
   <li class="md-nav__item">
-    <a href="apps/watchtower/" title="Watchtower" class="md-nav__link">
+    <a href="../watchtower/" title="Watchtower" class="md-nav__link">
       Watchtower
     </a>
   </li>
@@ -631,7 +650,7 @@
 
 
   <li class="md-nav__item">
-    <a href="advanced/advanced-usage/" title="Advanced Usage" class="md-nav__link">
+    <a href="../../advanced/advanced-usage/" title="Advanced Usage" class="md-nav__link">
       Advanced Usage
     </a>
   </li>
@@ -643,7 +662,7 @@
 
 
   <li class="md-nav__item">
-    <a href="advanced/backups/" title="Backups" class="md-nav__link">
+    <a href="../../advanced/backups/" title="Backups" class="md-nav__link">
       Backups
     </a>
   </li>
@@ -655,7 +674,7 @@
 
 
   <li class="md-nav__item">
-    <a href="advanced/overrides/" title="Overrides" class="md-nav__link">
+    <a href="../../advanced/overrides/" title="Overrides" class="md-nav__link">
       Overrides
     </a>
   </li>
@@ -667,7 +686,7 @@
 
 
   <li class="md-nav__item">
-    <a href="advanced/domain-info/" title="Setting Up a Domain" class="md-nav__link">
+    <a href="../../advanced/domain-info/" title="Setting Up a Domain" class="md-nav__link">
       Setting Up a Domain
     </a>
   </li>
@@ -679,7 +698,7 @@
 
 
   <li class="md-nav__item">
-    <a href="advanced/smb-mounting/" title="SMB Mounting" class="md-nav__link">
+    <a href="../../advanced/smb-mounting/" title="SMB Mounting" class="md-nav__link">
       SMB Mounting
     </a>
   </li>
@@ -691,7 +710,7 @@
 
 
   <li class="md-nav__item">
-    <a href="advanced/technical-info/" title="Technical Info" class="md-nav__link">
+    <a href="../../advanced/technical-info/" title="Technical Info" class="md-nav__link">
       Technical Info
     </a>
   </li>
@@ -703,7 +722,7 @@
 
 
   <li class="md-nav__item">
-    <a href="advanced/vpn-info/" title="VPN Information" class="md-nav__link">
+    <a href="../../advanced/vpn-info/" title="VPN Information" class="md-nav__link">
       VPN Information
     </a>
   </li>
@@ -715,7 +734,7 @@
 
 
   <li class="md-nav__item">
-    <a href="advanced/uninstall/" title="Uninstall" class="md-nav__link">
+    <a href="../../advanced/uninstall/" title="Uninstall" class="md-nav__link">
       Uninstall
     </a>
   </li>
@@ -740,22 +759,41 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#one-time-setup-required" title="One Time Setup (required)" class="md-nav__link">
-    One Time Setup (required)
+  <a href="#general-setup" title="General Setup" class="md-nav__link">
+    General Setup
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-dockstarter" title="Running DockSTARTer" class="md-nav__link">
-    Running DockSTARTer
+  <a href="#part-2" title="Part 2" class="md-nav__link">
+    Part 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-does-my-letsencrypt-proxy-configuration-for-insert-app-here-say-one-port-but-i-have-to-access-it-with-another-port" title="Why does my LetsEncrypt proxy configuration for (insert app here) say one port, but I have to access it with another port?" class="md-nav__link">
+    Why does my LetsEncrypt proxy configuration for (insert app here) say one port, but I have to access it with another port?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-automatically-make-http-calls-redirect-to-https-for-letsencrypt" title="How do i automatically make http calls redirect to https for letsencrypt?" class="md-nav__link">
+    How do i automatically make http calls redirect to https for letsencrypt?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-redirect-the-main-indexhtml-page-to-organizr" title="How do i redirect the main index.html page to organizr?" class="md-nav__link">
+    How do i redirect the main index.html page to organizr?
   </a>
   
 </li>
@@ -776,99 +814,91 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/GhostWriters/DockSTARTer/edit/docs/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/GhostWriters/DockSTARTer/edit/docs/docs/apps/letsencrypt.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="_1"><a href="https://dockstarter.com"><img alt="DockSTARTer" src="https://github.com/GhostWriters/DockSTARTer/raw/master/.github/logo.png" /></a></h1>
-<p><a href="#backers"><img alt="Backers on Open Collective" src="https://img.shields.io/opencollective/backers/DockSTARTer.svg" /></a>
-<a href="#sponsors"><img alt="Sponsors on Open Collective" src="https://img.shields.io/opencollective/sponsors/DockSTARTer.svg" /></a>
-<a href="https://beerpay.io/GhostWriters/DockSTARTer"><img alt="Beerpay support" src="https://img.shields.io/beerpay/GhostWriters/DockSTARTer.svg" /></a>
-<a href="https://discord.gg/YFyJpmH"><img alt="Discord chat" src="https://img.shields.io/discord/477959324183035936.svg?logo=discord" /></a>
-<a href="https://github.com/GhostWriters/DockSTARTer/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/GhostWriters/DockSTARTer.svg" /></a>
-<a href="https://github.com/GhostWriters/DockSTARTer/commits/master"><img alt="GitHub last commit master" src="https://img.shields.io/github/last-commit/GhostWriters/DockSTARTer/master.svg?label=code%20committed" /></a>
-<a href="https://github.com/GhostWriters/DockSTARTer/commits/docs"><img alt="GitHub last commit docs" src="https://img.shields.io/github/last-commit/GhostWriters/DockSTARTer/docs.svg?label=docs%20committed" /></a>
-<a href="https://github.com/GhostWriters/DockSTARTer/blob/master/LICENSE.md"><img alt="GitHub license" src="https://img.shields.io/github/license/GhostWriters/DockSTARTer.svg" /></a>
-<a href="https://travis-ci.com/GhostWriters/DockSTARTer"><img alt="Travis (.com) branch" src="https://img.shields.io/travis/com/GhostWriters/DockSTARTer/master.svg?logo=travis" /></a></p>
-<p>The main goal of DockSTARTer is to make it quick and easy to get up and running with Docker.</p>
-<p>You may choose to rely on DockSTARTer for various changes to your Docker system, or use DockSTARTer as a stepping stone and learn to do more advanced configurations.</p>
-<p><img alt="Main Menu" src="https://i.imgur.com/odfRk0j.png" /></p>
-<p><img alt="App Select" src="https://i.imgur.com/tFsu2Hh.png" /></p>
-<p><img alt="Value Prompt" src="https://i.imgur.com/k1bdAoQ.png" /></p>
-<p><img alt="Command Line Interface" src="https://i.imgur.com/Y8F3uT2.png" /></p>
-<h2 id="getting-started">Getting Started</h2>
-<h3 id="one-time-setup-required">One Time Setup (required)</h3>
-<ul>
-<li>APT Systems (Debian/Ubuntu/Raspbian/etc)</li>
-</ul>
-<pre><code class="bash"># NOTE: Ubuntu 18.10 is known to have issues with the installation process, 18.04 is recommended
-sudo apt-get install curl git
-bash -c &quot;$(curl -fsSL https://get.dockstarter.com)&quot;
-sudo reboot
+                  <h1>Let's Encrypt (Certbot)</h1>
+                
+                <h2 id="general-setup">General Setup</h2>
+<p>Out of the box, the LetsEncrypt container provided performs both certificate renewals and reverse proxy functions. More on this container can be found <a href="https://hub.docker.com/r/linuxserver/letsencrypt/">here</a>.</p>
+<p>To configure your reverse proxy, consider if you want to use subfolders (ie. domain.com/portainer) or subdomains (ie. portainer.domain.com). Subdomains will take more configuration, as DNS entries and certificate subject alternate names are required.</p>
+<p>The first thing to setup is your domain and email settings in <code>.docker/compose/.env</code> under LETSENCRYPT. Set the <code>LETSENCRYPT_EMAIL</code> and <code>LETSENCRYPT_URL</code>. If using subdomains ensure to add each subdomain to <code>LETSENCRYPT_SUBDOMAINS</code> as each subdomain prefix (ie. <code>LETSENCRYPT_SUBDOMAINS=portainer,deluge,pihole</code>.</p>
+<p>There are a number of sample proxy configuration files found in <code>~/.config/appdata/letsencrypt/nginx/proxy-confs/</code> and in most cases will just need the .sample removed from the filename. Currently not every applicable app has an example configuration and are still being tested.</p>
+<p>Subfolder Example:</p>
+<pre><code>cp ~/.config/appdata/letsencrypt/nginx/proxy-confs/portainer.subfolder.conf.sample ~/.config/appdata/letsencrypt/nginx/proxy-confs/portainer.subfolder.conf
 </code></pre>
 
-<ul>
-<li>DNF Systems (Fedora)</li>
-</ul>
-<pre><code class="bash">sudo dnf install curl git
-bash -c &quot;$(curl -fsSL https://get.dockstarter.com)&quot;
-sudo reboot
+<p>This will make Portainer available at <code>domain.com/portainer</code></p>
+<p>Subdomain Example:</p>
+<pre><code>cp ~/.config/appdata/letsencrypt/nginx/proxy-confs/portainer.subdomain.conf.sample ~/.config/appdata/letsencrypt/nginx/proxy-confs/portainer.subdomain.conf
 </code></pre>
 
-<ul>
-<li>YUM Systems (CentOS)</li>
-</ul>
-<pre><code class="bash">sudo yum install curl git
-bash -c &quot;$(curl -fsSL https://get.dockstarter.com)&quot;
-sudo reboot
+<p>and will enable the service at <code>portainer.domain.com</code></p>
+<p>Each time you change a proxy conf file you will need to restart the LetsEncrypt container:</p>
+<p><code>docker restart letsencrypt</code></p>
+<h2 id="part-2">Part 2</h2>
+<p>If you haven't forwarded ports for LE before container was setup, stop container, delete letsencrypt config folder, run <code>ds -c</code>, and you should be good to go.</p>
+<p>If you are <strong>not</strong> using subdomains:
+1. Blank out LETSENCRYPT_SUBDOMAINS in ~/.docker/compose/.env Like so:</p>
+<pre><code>LETSENCRYPT_SUBDOMAINS=
 </code></pre>
 
-<details>
-  <summary>Alternate install (any system)</summary>
-
-The standard install above downloads the initial script using a method with some known risks. For those concerned with the security of the above method here is an alternative:
-
-<pre><code class="bash">
-# NOTE: Run the appropriate command for your distro
-sudo apt-get install curl git
-sudo dnf install curl git
-sudo yum install curl git
-
-# NOTE: Do not sudo the next line.
-git clone https://github.com/GhostWriters/DockSTARTer "/home/${USER}/.docker"
-sudo bash /home/${USER}/.docker/main.sh -i
-sudo reboot
+<ol>
+<li>Fill in EMAIL, URL, like so:</li>
+</ol>
+<pre><code>LETSENCRYPT_EMAIL=user@domain.com
+LETSENCRYPT_URL=appropriateaddress.com
 </code></pre>
 
-</details>
-
-<h3 id="running-dockstarter">Running DockSTARTer</h3>
-<pre><code class="bash">sudo ds
+<ol>
+<li><code>cp organizr.subfolder.conf.sample organizr.subfolder.conf</code> in ~/.config/appdata/letsencrypt/nginx/proxy-confs</li>
+<li>Edit ~/.config/appdata/letsencrypt/nginx/site-confs/default and comment out the following (As shown):</li>
+</ol>
+<pre><code>#       location / {
+#               try_files $uri $uri/ /index.html /index.php?$args =404;
+#       }
 </code></pre>
 
-<p>To run DockSTARTer use the command above. You should now see the main menu from the screenshots. Select <code>Configuration</code> and then <code>Full Setup</code> and you will be guided through selecting apps and starting containers.</p>
-<p>See our <a href="https://dockstarter.com">documentation</a> for more detailed information.</p>
-<h2 id="support">Support</h2>
-<p><a href="https://discord.gg/YFyJpmH"><img alt="Discord chat" src="https://img.shields.io/discord/477959324183035936.svg?logo=discord" /></a></p>
-<p>Click the chat badge to join us on Discord for support!</p>
-<p>[<a href="https://github.com/GhostWriters/DockSTARTer/issues/new?template=feature_request.md">Feature Request</a>] [<a href="https://github.com/GhostWriters/DockSTARTer/issues/new?template=bug_report.md">Bug Report</a>]</p>
-<h2 id="contributors">Contributors</h2>
-<p><a href="https://github.com/GhostWriters/DockSTARTer/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/GhostWriters/DockSTARTer.svg" /></a></p>
-<p>This project exists thanks to all the people who contribute.
-<a href="https://GitHub.com/GhostWriters/DockSTARTer/graphs/contributors"><img alt="GitHub contributors" src="https://opencollective.com/DockSTARTer/contributors.svg?button=false" /></a></p>
-<h2 id="backers">Backers</h2>
-<p>Thank you to all our backers! [<a href="https://opencollective.com/DockSTARTer#backer">Become a backer</a>]</p>
-<p><a href="https://opencollective.com/DockSTARTer#backers"><img alt="Backers on Open Collective" src="https://opencollective.com/DockSTARTer/backers.svg" /></a></p>
-<h2 id="sponsors">Sponsors</h2>
-<p>Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [<a href="https://opencollective.com/DockSTARTer#sponsor">Become a sponsor</a>]</p>
-<p><a href="https://opencollective.com/DockSTARTer/sponsor/0/website"><img alt="Sponsors on Open Collective" src="https://opencollective.com/DockSTARTer/sponsor/0/avatar.svg" /></a> <a href="https://opencollective.com/DockSTARTer/sponsor/1/website"><img alt="Sponsors on Open Collective" src="https://opencollective.com/DockSTARTer/sponsor/1/avatar.svg" /></a> <a href="https://opencollective.com/DockSTARTer/sponsor/2/website"><img alt="Sponsors on Open Collective" src="https://opencollective.com/DockSTARTer/sponsor/2/avatar.svg" /></a> <a href="https://opencollective.com/DockSTARTer/sponsor/3/website"><img alt="Sponsors on Open Collective" src="https://opencollective.com/DockSTARTer/sponsor/3/avatar.svg" /></a> <a href="https://opencollective.com/DockSTARTer/sponsor/4/website"><img alt="Sponsors on Open Collective" src="https://opencollective.com/DockSTARTer/sponsor/4/avatar.svg" /></a> <a href="https://opencollective.com/DockSTARTer/sponsor/5/website"><img alt="Sponsors on Open Collective" src="https://opencollective.com/DockSTARTer/sponsor/5/avatar.svg" /></a> <a href="https://opencollective.com/DockSTARTer/sponsor/6/website"><img alt="Sponsors on Open Collective" src="https://opencollective.com/DockSTARTer/sponsor/6/avatar.svg" /></a> <a href="https://opencollective.com/DockSTARTer/sponsor/7/website"><img alt="Sponsors on Open Collective" src="https://opencollective.com/DockSTARTer/sponsor/7/avatar.svg" /></a> <a href="https://opencollective.com/DockSTARTer/sponsor/8/website"><img alt="Sponsors on Open Collective" src="https://opencollective.com/DockSTARTer/sponsor/8/avatar.svg" /></a> <a href="https://opencollective.com/DockSTARTer/sponsor/9/website"><img alt="Sponsors on Open Collective" src="https://opencollective.com/DockSTARTer/sponsor/9/avatar.svg" /></a></p>
-<h2 id="support-on-beerpay">Support on Beerpay</h2>
-<p><a href="https://beerpay.io/GhostWriters/DockSTARTer"><img alt="Beerpay support" src="https://img.shields.io/beerpay/GhostWriters/DockSTARTer.svg" /></a></p>
-<p>Support development with <a href="https://beerpay.io/GhostWriters/DockSTARTer">Beerpay</a>!</p>
-<h2 id="special-thanks">Special Thanks</h2>
-<ul>
-<li><a href="https://www.smarthomebeginner.com">SmartHomeBeginner.com</a> for creating <a href="https://github.com/htpcBeginner/AtoMiC-ToolKit">AtoMiC-ToolKit</a> that served as this project's primary inspiration, and later <a href="https://www.smarthomebeginner.com/docker-home-media-server-2018-basic/">this</a> guide that provided some initial direction with Docker.</li>
-<li><a href="https://www.linuxserver.io">LinuxServer.io</a> for maintaining the majority of the Docker images used in this project.</li>
-</ul>
+<h2 id="why-does-my-letsencrypt-proxy-configuration-for-insert-app-here-say-one-port-but-i-have-to-access-it-with-another-port">Why does my LetsEncrypt proxy configuration for (insert app here) say one port, but I have to access it with another port?</h2>
+<p>Generally speaking, your configuration <em>does</em> point to the port you specify, which is correct. DockSTARTer sets your app to 8080 on your internal network, but docker has a docker network as well. On <em>that</em> network your app runs on the default port for the app! That is how containers like LetsEncrypt and Organizr (For example) communicate.</p>
+<h2 id="how-do-i-automatically-make-http-calls-redirect-to-https-for-letsencrypt">How do i automatically make http calls redirect to https for letsencrypt?</h2>
+<p>This change will make it so that if you type http://blahblah it will redirect to https://blahblah</p>
+<ol>
+<li>
+<p>Edit ~/.config/appdata/nginx/site-confs/default</p>
+</li>
+<li>
+<p>Uncomment the relevant part of the file (see below)</p>
+</li>
+</ol>
+<pre><code># listening on port 80 disabled by default, remove the &quot;#&quot; signs to enable
+# redirect all traffic to https
+server {
+    listen 80;
+    listen [::]:80;
+    server_name _;
+    return 301 https://$host$request_uri;
+}
+</code></pre>
+
+<ol>
+<li>Restart the letsencrypt container
+<code>docker restart letsencrypt</code></li>
+</ol>
+<h2 id="how-do-i-redirect-the-main-indexhtml-page-to-organizr">How do i redirect the main index.html page to organizr?</h2>
+<p>If you want https://mydomain.duckdns.org to load organizr you can do the following.</p>
+<ol>
+<li>Goto <code>~/.config/appdata/letsencrypt/www</code></li>
+<li>Replace <code>index.html</code> with <code>index.php</code></li>
+<li>Edit index.php and replace it with the following single line</li>
+</ol>
+<pre><code>&lt;?php header(&quot;Location: https://organizr.mydomain.duckdns.org&quot;); ?&gt;
+</code></pre>
+
+<ol>
+<li>Restart the letsencrypt container
+<code>docker restart letsencrypt</code></li>
+</ol>
                 
                   
                 
@@ -889,14 +919,28 @@ sudo reboot
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
+          <a href="../homeassistant/" title="Home Assistant" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home Assistant
+              </span>
+            </div>
+          </a>
         
-          <a href="basics/available-apps/" title="Available Applications" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+        
+          <a href="../logarr/" title="Logarr" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Available Applications
+                Logarr
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -928,9 +972,9 @@ sudo reboot
       
     </div>
     
-      <script src="assets/javascripts/application.39abc4af.js"></script>
+      <script src="../../assets/javascripts/application.39abc4af.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

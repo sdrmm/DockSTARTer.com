@@ -792,8 +792,14 @@
 <p>If the above does not work repeat the steps a second time but also with step 4 in your <code>.env</code> set <code>PLEX_NETWORK_MODE=host</code>. After claiming your server set <code>PLEX_NETWORK_MODE=</code> (back to blank).</p>
 <h3 id="everythings-gone-to-crap-and-i-need-to-re-make-my-server-what-do-i-do">Everything's gone to crap, and I need to re-make my server. What do I do?</h3>
 <p>Thankfully, some of this information is well documented (but not easily found) over on Plex's website here!
-1. Moving an installation to another system: https://support.plex.tv/articles/201370363-move-an-install-to-another-system/
-2. Where is the Plex Media Server data directory? https://support.plex.tv/articles/202915258-where-is-the-plex-media-server-data-directory-located/</p>
+1. Moving an installation to another system: <a href="https://support.plex.tv/articles/201370363-move-an-install-to-another-system/">https://support.plex.tv/articles/201370363-move-an-install-to-another-system/</a>
+2. Where is the Plex Media Server data directory? <a href="https://support.plex.tv/articles/202915258-where-is-the-plex-media-server-data-directory-located/">https://support.plex.tv/articles/202915258-where-is-the-plex-media-server-data-directory-located/</a></p>
+<p>If you would like to have Plex use a GPU that is attached to your DockSTARTer host, you can do this using an override like so:</p>
+<pre><code>devices:
+     - /dev/dri:/dev/dri
+</code></pre>
+
+<p>Refer to this forum post for details: <a href="https://forums.plex.tv/t/using-hardware-acceleration-in-docker/229702/3">Using Hardware Acceleration in Docker</a></p>
                 
                   
                 

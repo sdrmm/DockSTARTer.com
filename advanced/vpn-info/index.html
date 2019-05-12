@@ -697,6 +697,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-vpn-containers-remotely-using-letsencrypt" title="Access VPN containers remotely using LetsEncrypt" class="md-nav__link">
+    Access VPN containers remotely using LetsEncrypt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-can-i-check-if-my-vpn-is-working" title="How can I check if my VPN is working?" class="md-nav__link">
     How can I check if my VPN is working?
   </a>
@@ -784,6 +791,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-vpn-containers-remotely-using-letsencrypt" title="Access VPN containers remotely using LetsEncrypt" class="md-nav__link">
+    Access VPN containers remotely using LetsEncrypt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-can-i-check-if-my-vpn-is-working" title="How can I check if my VPN is working?" class="md-nav__link">
     How can I check if my VPN is working?
   </a>
@@ -840,6 +854,20 @@ echo &quot;tun&quot; | sudo tee /etc/modules-load.d/tun.conf
 sudo reboot
 </code></pre>
 
+<h2 id="access-vpn-containers-remotely-using-letsencrypt">Access VPN containers remotely using LetsEncrypt</h2>
+<p>If you're attempting to access the Web UI for one of your VPN containers (e.g. TransmissionVPN, DelugeVPN, etc.) from outside of your home network using LetsEncrypt, you will need to modify the LetsEncrypt configuration file to support the name difference. The sample configs are controlled by <a href="https://www.linuxserver.io/">LSIO</a>, not by DockSTARTer. So this change is required to get the VPN containers running remotely.</p>
+<p>The sample proxy configuration files found in <code>.docker/config/letsencrypt/nginx/proxy-confs/</code> will need to be modified and as usual, have the .sample removed from the filename.</p>
+<p>You will also need to edit the appropriate proxy <code>.conf</code>. The below example uses the TransmissionVPN container as an example:</p>
+<p>Enter either <code>sudo nano transmission.subfolder.conf</code> or <code>sudo nano transmission.subdomain.conf</code> depending on your configuration desires and change the below line:</p>
+<p>Original</p>
+<pre><code>   set $upstream_transmission transmission;
+</code></pre>
+
+<p>Modified</p>
+<pre><code>   set $upstream_transmission transmissionvpn;
+</code></pre>
+
+<p>Save the file out and then restart your containers with a <code>ds -c</code> command.</p>
 <h2 id="how-can-i-check-if-my-vpn-is-working">How can I check if my VPN is working?</h2>
 <ul>
 <li>https://torguard.net/checkmytorrentipaddress.php</li>

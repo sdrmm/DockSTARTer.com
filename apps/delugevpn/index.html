@@ -765,18 +765,7 @@
                 
                 <hr />
 <h2 id="layout-default">layout: default</h2>
-<p>If you're attempting to get access to the DelugeVPN WebUI remotely outside of your home network using LetsEncrypt, you will need to modify the LetsEncrypt configuration file to support the name difference. The sample configs are controlled by LSIO, not by DockSTARTer. So this change is required to get DelugeVPN WebUI running remotely.</p>
-<p>The sample proxy configuration files found in <code>~/.config/appdata/letsencrypt/nginx/proxy-confs/</code> will need to be modified and as usual, have the .sample removed from the filename.</p>
-<p>In addition you will need to edit the file ( <code>sudo nano deluge.subfolder.conf</code> or <code>sudo nano deluge.subdomain.conf</code> depending on your configuration desires) and change the below line:</p>
-<p>Original</p>
-<pre><code>   set $upstream_deluge deluge;
-</code></pre>
-
-<p>Modified</p>
-<pre><code>   set $upstream_deluge delugevpn;
-</code></pre>
-
-<p>Save the file out and then restart your containers with a <code>ds -c</code> command.</p>
+<p>If you're attempting to get access to the DelugeVPN WebUI remotely outside of your home network using LetsEncrypt you must follow the steps outlined in <a href="https://dockstarter.com/advanced/vpn-info/">VPN Information</a>.</p>
                 
                   
                 

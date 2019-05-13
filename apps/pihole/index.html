@@ -823,7 +823,7 @@
 <h2 id="netplan-setup">Netplan setup</h2>
 <p>On Ubuntu 18.04 and newer you will have <code>netplan</code> controlling your network and should see https://netplan.io/ for examples on how to configure it. You need to set your nameserver to use your LAN's DNS or a public DNS such as <code>1.1.1.1</code> before proceeding with any instructions below.</p>
 <h2 id="resolvconf">Resolvconf</h2>
-<p>On Ubuntu 18.04, resolveconf was removed as the default means to control DNS.  In addition to the settings mentioned regarding netplan, we recommend setting up resolvconf.</p>
+<p>On Ubuntu 18.04, resolvconf was removed as the default means to control DNS.  In addition to the settings mentioned regarding netplan, we recommend setting up resolvconf.</p>
 <p>To install run <code>sudo apt install resolvconf</code></p>
 <p>Edit <code>/etc/resolvconf/resolv.conf.d/head</code> using sudo and enter <code>nameserver 1.1.1.1</code> on the first uncommented line.</p>
 <p>Restart the service <code>sudo service resolvconf restart</code></p>

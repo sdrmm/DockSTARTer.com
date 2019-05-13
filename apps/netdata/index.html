@@ -879,8 +879,8 @@ location ~ /netdata/(?&lt;ndpath&gt;.*) {
 </code></pre>
 
 <h3 id="notifications">Notifications</h3>
-<p>Add <a href="https://github.com/netdata/netdata/blob/master/conf.d/health_alarm_notify.conf">health_alarm_notify.conf</a> to your netdata config directory. Populate the notification service(s) you want with login, tokens or similar that is applicable. Instructions found in <a href="https://github.com/netdata/netdata/blob/master/conf.d/health_alarm_notify.conf">health_alarm_notify.conf</a>.</p>
-<p>Create health.d directory in netdata config directory. Add conf files from <a href="https://github.com/netdata/netdata/tree/master/conf.d/health.d">health.d</a> for which modules you want alarms. Also note that one can remove specific alarms by commenting them in .conf files.</p>
+<p>Add <a href="https://github.com/netdata/netdata/blob/master/health/notifications/health_alarm_notify.conf">health_alarm_notify.conf</a> to your netdata config directory. Populate the notification service(s) you want with login, tokens or similar that is applicable. Instructions found in <a href="https://github.com/netdata/netdata/blob/master/health/notifications/health_alarm_notify.conf">health_alarm_notify.conf</a>.</p>
+<p>Create health.d directory in netdata config directory. Add conf files from <a href="https://github.com/netdata/netdata/tree/master/health/health.d">health.d</a> for which modules you want alarms. Also note that one can remove specific alarms by commenting them in .conf files.</p>
 <h3 id="get-cpu-temp-from-raspberry-pi">Get CPU temp from raspberry pi</h3>
 <p>Netdata will not pick up cpu temp per default for raspberry pi. To activate chart for pi cpu temp add a file with name charts.d.conf in netdata config directory and add the following line.</p>
 <blockquote>
@@ -889,7 +889,7 @@ location ~ /netdata/(?&lt;ndpath&gt;.*) {
 <h3 id="get-data-for-home-assistant">Get data for home assistant</h3>
 <p>To identify the correct data group and element to input in netdata home assistant component use http://yournetdataip:19999/api/v1/allmetrics?format=json</p>
 <h3 id="monitor-services-with-netdata">Monitor services with netdata</h3>
-<p>Create python.d directory in netdata config directory. Add <a href="https://github.com/netdata/netdata/blob/39385d786d0f2fd1b1aa05b571150f988d895f93/conf.d/python.d/httpcheck.conf">httpcheck.conf</a> to your python.d directory. Edit according to instructions in file, suggestion is to add after last line in conf file. See example below.</p>
+<p>Create python.d directory in netdata config directory. Add <a href="https://github.com/netdata/netdata/blob/master/health/health.d/httpcheck.conf">httpcheck.conf</a> to your python.d directory. Edit according to instructions in file, suggestion is to add after last line in conf file. See example below.</p>
 <pre><code># This plugin is intended for simple cases. Currently, the accuracy of the response time is low and should be used as reference only.
 
 Hydra:
@@ -910,7 +910,7 @@ Ombi:
 </code></pre>
 
 <p>You will now get charts in netdata for ombi and hydra. Please add your ip and ports accordingly.</p>
-<p>To get alarms add <a href="https://github.com/netdata/netdata/blob/master/conf.d/health.d/httpcheck.conf">httpcheck.conf</a> to your health.d directory. Don't forget to comment the unwanted alarms. Slow response alarm can be quite annoying.</p>
+<p>To get alarms add <a href="https://github.com/netdata/netdata/blob/master/health/health.d/httpcheck.conf">httpcheck.conf</a> to your health.d directory. Don't forget to comment the unwanted alarms. Slow response alarm can be quite annoying.</p>
 <h3 id="netdata-badges">Netdata badges</h3>
 <p>Coming soon.</p>
                 

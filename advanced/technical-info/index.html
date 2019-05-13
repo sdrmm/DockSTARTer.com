@@ -884,7 +884,7 @@ p2p@p2pmachine:/mnt/p2pDownloads$
 <p>Ineligant as that is, and a lot of those folders <em>could</em> be deleted, from unused testing etc, this is the default behavior because Sonarr and (for instance) Transmission need to refer to the same paths in order to seamlessly move files around. Sonarr and Radarr both support path mapping but having DS configure them is outside the scope of this project.</p>
 <p>Instead, if you want to run multiple download containers, configure Transmissions download directories itself (at <code>ip.add.ress:9091/transmission/</code>).</p>
 <p>Change them all to <code>/downloads/transmission/incomplete</code>,<code>/downloads/transmission/complete</code> etc etc. Then it has it's own folder but can still report the same root path.</p>
-<p><strong>Again</strong>, do not edit the default YML files, instead, see the section on <em>Overrides</em>, below. (Assuming you are reading this page from start to finish for the first time) there is a reason you haven't seen their location yet ;)</p>
+<p><strong>Again</strong>, do not edit the default YML files, instead, see the section on <a href="https://dockstarter.com/advanced/overrides/"><em>Overrides</em></a>. (Assuming you are reading this page from start to finish for the first time) there is a reason you haven't seen their location yet ;)</p>
 <h3 id="ports">Ports</h3>
 <p>The ports for access to (and from) your apps are manipulated in your <code>.env</code>ironment settings. I use the Sonarr example a lot but if you're not familiar, it's default port is <code>8989</code>.</p>
 <p><code>SONARR_PORT_8989=6969</code></p>

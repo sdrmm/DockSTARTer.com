@@ -61,6 +61,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://dockstarter.com/apps/jackett/</loc>
+     <lastmod>2019-05-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://dockstarter.com/apps/letsencrypt/</loc>
      <lastmod>2019-05-16</lastmod>
      <changefreq>daily</changefreq>

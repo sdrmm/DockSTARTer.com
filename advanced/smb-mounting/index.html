@@ -12,7 +12,7 @@ password=&lt;password to access resource&gt;
 </code></pre>
 
 <p>And to make sure that sticks, you're going to put this entry in your <code>/etc/fstab</code> file (You'll probably want to put it at the bottom) to match:
-<code>//&lt;host&gt;/Downloads /mnt/downloads cifs uid=1000,gid=1000,credentials=/home/&lt;your home user&gt;/.mount-creds,rw,vers=3.0</code></p>
+<code>//&lt;host&gt;/Downloads /mnt/downloads cifs uid=1000,gid=1000,credentials=/home/&lt;your home user&gt;/.credentials,rw,vers=3.0</code></p>
 <p>You should be able to reboot to test the mount, but you should now be able to <code>ls -al /mnt/Downloads</code> (in my example) and see the files in your Shared Downloads folder!</p>
 <h2 id="oplock-issues">OpLock issues</h2>
 <p>If you have containers that lock the drive and fail to unlock, you can deny the granting of opportunistic locks by setting the following registry entry:</p>

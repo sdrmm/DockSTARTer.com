@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#current-issue" tabindex="1" class="md-skip">
+      <a href="#notifications" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -860,13 +860,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#current-issue" title="Current issue" class="md-nav__link">
-    Current issue
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#notifications" title="Notifications" class="md-nav__link">
     Notifications
   </a>
@@ -1524,13 +1517,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#current-issue" title="Current issue" class="md-nav__link">
-    Current issue
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#notifications" title="Notifications" class="md-nav__link">
     Notifications
   </a>
@@ -1586,14 +1572,7 @@
                 
                   <h1>Netdata</h1>
                 
-                <h3 id="current-issue">Current issue</h3>
-<p><strong><em> current issues with upstream container </em></strong>
-There is currently a possible issue that prevents the container starting up properly. “addgroup: gid '999' in use”
-Reference: https://github.com/netdata/netdata/issues/6251
-Fix is simple: nano ~/.docker/compose/.apps/netdata/netdata.yml 
-- Comment out this line: - PGID=${DOCKERGID}
-- run ds -c</p>
-<p>By default, netdata will pull from a UID for the container itself to display in the list of netdata servers you have, so you would see something like '0f2342dac'. To define this and make it more readable/recognizable for you (In case you have multiple netdata servers):
+                <p>By default, netdata will pull from a UID for the container itself to display in the list of netdata servers you have, so you would see something like '0f2342dac'. To define this and make it more readable/recognizable for you (In case you have multiple netdata servers):
 1. Stop the netdata container.
 2. Edit or Create this file: <a href="https://gist.github.com/mattgphoto/1e7afc85931ca98002a87abdc8bb257e">~/.docker/compose/docker-compose.override.yml</a> and change <code>newnetdataname</code> to <code>friendlynamefornetdata</code>.
 3. Once this is done, re-run <code>sudo ds -c</code></p>

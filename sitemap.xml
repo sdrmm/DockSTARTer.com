@@ -6,8 +6,8 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://dockstarter.com/introduction/</loc>
+     <lastmod>2019-06-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -27,6 +27,46 @@
     </url>
     <url>
      <loc>https://dockstarter.com/basics/port-conflicts/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/advanced-usage/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/backups/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/overrides/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/domain-info/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/smb-mounting/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/technical-info/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/vpn-info/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/advanced/uninstall/</loc>
      <lastmod>2019-06-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -467,46 +507,6 @@
     </url>
     <url>
      <loc>https://dockstarter.com/apps/znc/</loc>
-     <lastmod>2019-06-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/advanced/advanced-usage/</loc>
-     <lastmod>2019-06-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/advanced/backups/</loc>
-     <lastmod>2019-06-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/advanced/overrides/</loc>
-     <lastmod>2019-06-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/advanced/domain-info/</loc>
-     <lastmod>2019-06-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/advanced/smb-mounting/</loc>
-     <lastmod>2019-06-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/advanced/technical-info/</loc>
-     <lastmod>2019-06-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/advanced/vpn-info/</loc>
-     <lastmod>2019-06-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://dockstarter.com/advanced/uninstall/</loc>
      <lastmod>2019-06-25</lastmod>
      <changefreq>daily</changefreq>
     </url>

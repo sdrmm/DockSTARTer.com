@@ -91,6 +91,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#guacamole" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -706,10 +710,48 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Guacamole
+      </label>
     
     <a href="./" title="Guacamole" class="md-nav__link md-nav__link--active">
       Guacamole
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-guacamole" title="Configuring Guacamole" class="md-nav__link">
+    Configuring Guacamole
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-f2b" title="Configuring F2B" class="md-nav__link">
+    Configuring F2B
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1530,6 +1572,44 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-guacamole" title="Configuring Guacamole" class="md-nav__link">
+    Configuring Guacamole
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-f2b" title="Configuring F2B" class="md-nav__link">
+    Configuring F2B
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -1538,9 +1618,100 @@
                   <a href="https://github.com/GhostWriters/DockSTARTer.com/edit/master/docs/apps/guacamole.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Guacamole</h1>
-                
-                <p>Placeholder page</p>
+                <h1 id="guacamole">Guacamole</h1>
+<p>This guide will help you replicate Gilbn's tutorial to protect your Guacamole install with F2B</p>
+<p>Since DockSTARTer uses Oznu's image for Guacamole, it only generates logs inside the container itself. Following these steps will allow you to get the Guacamole container to generate a log file in <code>~/.config/appdata/guacamole</code> which you can then mount to the LetsEncrypt container so F2B can monitor it and ban malicious IPs.</p>
+<p>You can find Gilbn's tutorial <a href="https://technicalramblings.com/blog/remotely-accessing-the-unraid-gui-with-guacamole-and-vnc-web-browser/">here</a>. We recommend you read it over so you get a basic understanding of what you will be doing:</p>
+<h2 id="configuring-guacamole">Configuring Guacamole</h2>
+<ol>
+<li>Create a <code>logback.xml</code> file inside <code>~/.config/appdata/guacamole/guacamole</code><ul>
+<li><code>touch ~/.config/appdata/guacamole/guacamole/logback.xml</code>
+      or</li>
+<li><code>sudo nano ~/.config/appdata/guacamole/guacamole/logback.xml</code></li>
+</ul>
+</li>
+<li>
+<p>Open the file with your favorite editor and place the following contents inside of it:</p>
+<p><strong>NOTE: Make sure to make changes to the timezone accordingly. Check the <code>php-local.ini</code> file in <code>~/.config/appdata/letsencrypt/php</code> if you are not sure what your timezone is.</strong></p>
+</li>
+</ol>
+<pre><code class="xml">&lt;configuration&gt;
+    &lt;!-- Appender for debugging --&gt;
+    &lt;appender name=&quot;GUAC-DEBUG&quot; class=&quot;ch.qos.logback.core.ConsoleAppender&quot;&gt;
+        &lt;encoder&gt;
+            &lt;pattern&gt;%d{HH:mm:ss.SSS, America/New_York} [%thread] %-5level %logger{36} - %msg%n&lt;/pattern&gt;
+        &lt;/encoder&gt;
+    &lt;/appender&gt;
+    &lt;!-- Appender for debugging in a file--&gt;
+    &lt;appender name=&quot;GUAC-DEBUG_FILE&quot; class=&quot;ch.qos.logback.core.FileAppender&quot;&gt;
+        &lt;file&gt;/config/logs/guacd.log&lt;/file&gt;
+        &lt;encoder&gt;
+            &lt;pattern&gt;%d{HH:mm:ss.SSS, America/New_York} [%thread] %-5level %logger{36} - %msg%n&lt;/pattern&gt;
+        &lt;/encoder&gt;
+    &lt;/appender&gt;
+    &lt;!-- Log at DEBUG level --&gt;
+    &lt;root level=&quot;debug&quot;&gt;
+        &lt;appender-ref ref=&quot;GUAC-DEBUG&quot;/&gt;
+        &lt;appender-ref ref=&quot;GUAC-DEBUG_FILE&quot;/&gt;
+    &lt;/root&gt;
+&lt;/configuration&gt;
+</code></pre>
+
+<ol>
+<li>Restart the Guacamole container so it creates <code>guacd.log</code> in <code>~/.config/appdata/guacamole/logs/</code></li>
+<li>Modify your docker-compose.override.yml in <code>~/.docker/compose/docker-compose.override.yml</code> file to mount the new log to letsencrypt<ol>
+<li>Example:</li>
+</ol>
+</li>
+</ol>
+<pre><code class="yaml">  letsencrypt:
+    volumes:
+      - ${DOCKERCONFDIR}/guacamole/logs/:/var/log/guacamole/
+</code></pre>
+
+<p>**NOTE: From here on out, we will be using <code>/var/log/guacamole</code> to refer to where the guacd.log lives within letsencrypt. This is just an example, you can mount your log file wherever you want inside the letsencrypt container.</p>
+<ol>
+<li>Recreate your container by running <code>ds -c up</code></li>
+<li>Perform an invalid login attempt on Guacamole</li>
+<li>Check the new guacd.log file located in <code>~/.config/appdata/guacamole/logs</code> to verify the failed login attempt<ol>
+<li>Example:</li>
+</ol>
+</li>
+</ol>
+<pre><code class="bash">grep -i nzbget ~/.config/appdata/guacamole/logs/guacd.log | grep failed
+15:03:17.762 [http-nio-8080-exec-1] WARN  o.a.g.r.auth.AuthenticationService - Authentication attempt from [x.x.x.x, x.x.x.x, x.x.x.x]
+for user &quot;nzbget&quot; failed.
+</code></pre>
+
+<h2 id="configuring-f2b">Configuring F2B</h2>
+<ol>
+<li>Navigate to <code>~/.config/appdata/letsencrypt/fail2ban</code>, in there you will see (2) folders <code>action.d</code> and <code>filter.d</code>, as well as other files, we are going to focus on the file called <code>jail.local</code> for now.</li>
+<li>Go ahead and open <code>jail.local</code> with your favorite editor as root and copy/paste the following:</li>
+</ol>
+<pre><code class="ini">[guacamole-auth]
+
+enabled = true
+port = http,https
+filter = guacamole-auth
+logpath = /var/log/guacamole/guacd.log
+ignoreip = 192.168.1.0/24
+</code></pre>
+
+<p>**NOTE: The ignore IP is so that fail2ban won’t ban your local IP. Check out <a href="https://www.aelius.com/njh/subnet_sheet.html">https://www.aelius.com/njh/subnet_sheet.html</a> if you are wondering what your CIDR notation is. Most often it will be /24 (netmask 255.255.255.0)
+To find your netmask run <code>ipconfig /all</code> on windows or <code>ifconfig | grep netmask</code> on linux.</p>
+<ol>
+<li>Next we are going to navigate to <code>~/.config/appdata/letsencrypt/fail2ban/filter.d</code> and in there you will see a file called <code>guacamole.conf</code>. We can't use this file because the regex in there will not work for our purposes.</li>
+<li>Open <code>guacamole.conf</code> with your favorite text editor as root and modify the regex line called <code>failregex</code> to match this:<ul>
+<li><code>\bAuthentication attempt from &lt;HOST&gt; for user "[^"]*" failed\.$</code></li>
+</ul>
+</li>
+<li>Next save the file and name it <code>guacamole-auth.conf</code></li>
+<li>Perform an invalid login attempt and check fail2ban's regex for Guacamole with the following command:
+  <code>docker exec -it letsencrypt fail2ban-regex /var/log/guacamole/guacd.log /config/fail2ban/filter.d/guacamole-auth.conf</code></li>
+<li>If you want to ban yourself, you can comment out the <code>ignoreip</code> line on <code>jail.local</code>.</li>
+</ol>
+<p>BONUS: Want to see notifications when someone gets the hammer? Check out this cool <a href="https://technicalramblings.com/blog/adding-ban-unban-notifications-from-fail2ban-to-discord/">Discord guide</a> or this <a href="https://technicalramblings.com/blog/adding-ban-unban-notifications-from-fail2ban-with-pushover/">Pushover guide</a></p>
+<p>Credits @halianelf, @christronyxyocum, @gilbN and @iXNyNe</p>
                 
                   
                 

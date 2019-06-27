@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#plex-is-telling-me-to-login-and-then-not-directing-me-to-the-server-i-just-set-up-why" tabindex="1" class="md-skip">
+      <a href="#plex" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -1106,6 +1106,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Plex
@@ -1119,27 +1121,36 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#plex-is-telling-me-to-login-and-then-not-directing-me-to-the-server-i-just-set-up-why" title="Plex is telling me to login and then not directing me to the server I just set up, why?" class="md-nav__link">
-    Plex is telling me to login and then not directing me to the server I just set up, why?
+  <a href="#cannot-setup-server-on-first-run" title="Cannot Setup Server On First Run" class="md-nav__link">
+    Cannot Setup Server On First Run
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#which-variable-do-i-need-to-change-if-im-a-plex-pass-user" title="Which variable do I need to change if I'm a Plex Pass user?" class="md-nav__link">
-    Which variable do I need to change if I'm a Plex Pass user?
+  <a href="#how-to-run-plex-pass-versions" title="How To Run Plex Pass Versions" class="md-nav__link">
+    How To Run Plex Pass Versions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#everythings-gone-to-crap-and-i-need-to-re-make-my-server-what-do-i-do" title="Everything's gone to crap, and I need to re-make my server. What do I do?" class="md-nav__link">
-    Everything's gone to crap, and I need to re-make my server. What do I do?
+  <a href="#rebuilding-from-scratch" title="Rebuilding From Scratch" class="md-nav__link">
+    Rebuilding From Scratch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-transcoding" title="Hardware Transcoding" class="md-nav__link">
+    Hardware Transcoding
   </a>
   
 </li>
@@ -1582,27 +1593,36 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#plex-is-telling-me-to-login-and-then-not-directing-me-to-the-server-i-just-set-up-why" title="Plex is telling me to login and then not directing me to the server I just set up, why?" class="md-nav__link">
-    Plex is telling me to login and then not directing me to the server I just set up, why?
+  <a href="#cannot-setup-server-on-first-run" title="Cannot Setup Server On First Run" class="md-nav__link">
+    Cannot Setup Server On First Run
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#which-variable-do-i-need-to-change-if-im-a-plex-pass-user" title="Which variable do I need to change if I'm a Plex Pass user?" class="md-nav__link">
-    Which variable do I need to change if I'm a Plex Pass user?
+  <a href="#how-to-run-plex-pass-versions" title="How To Run Plex Pass Versions" class="md-nav__link">
+    How To Run Plex Pass Versions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#everythings-gone-to-crap-and-i-need-to-re-make-my-server-what-do-i-do" title="Everything's gone to crap, and I need to re-make my server. What do I do?" class="md-nav__link">
-    Everything's gone to crap, and I need to re-make my server. What do I do?
+  <a href="#rebuilding-from-scratch" title="Rebuilding From Scratch" class="md-nav__link">
+    Rebuilding From Scratch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-transcoding" title="Hardware Transcoding" class="md-nav__link">
+    Hardware Transcoding
   </a>
   
 </li>
@@ -1626,20 +1646,27 @@
                   <a href="https://github.com/GhostWriters/DockSTARTer.com/edit/master/docs/apps/plex.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Plex</h1>
-                
-                <h3 id="plex-is-telling-me-to-login-and-then-not-directing-me-to-the-server-i-just-set-up-why">Plex is telling me to login and then not directing me to the server I just set up, why?</h3>
+                <h1 id="plex">Plex</h1>
+<h2 id="cannot-setup-server-on-first-run">Cannot Setup Server On First Run</h2>
 <p>Upon starting up Plex for the first time, it's very likely you'll need to follow these steps:</p>
 <p>Edit <code>~/.docker/compose/.env</code> and set <code>PLEX_NETWORK_MODE=host</code>. After claiming your server set <code>PLEX_NETWORK_MODE=</code> (back to blank).</p>
-<h3 id="which-variable-do-i-need-to-change-if-im-a-plex-pass-user">Which variable do I need to change if I'm a Plex Pass user?</h3>
-<p>PLEX_VERSION=plexpass</p>
-<h3 id="everythings-gone-to-crap-and-i-need-to-re-make-my-server-what-do-i-do">Everything's gone to crap, and I need to re-make my server. What do I do?</h3>
-<p>Thankfully, some of this information is well documented (but not easily found) over on Plex's website here!
-1. Moving an installation to another system: <a href="https://support.plex.tv/articles/201370363-move-an-install-to-another-system/">https://support.plex.tv/articles/201370363-move-an-install-to-another-system/</a>
-2. Where is the Plex Media Server data directory? <a href="https://support.plex.tv/articles/202915258-where-is-the-plex-media-server-data-directory-located/">https://support.plex.tv/articles/202915258-where-is-the-plex-media-server-data-directory-located/</a></p>
+<h2 id="how-to-run-plex-pass-versions">How To Run Plex Pass Versions</h2>
+<p>Edit <code>~/.docker/compose/.env</code> and set:</p>
+<pre><code class="bash">PLEX_VERSION=plexpass
+</code></pre>
+
+<p>Then run <code>ds -c</code></p>
+<h2 id="rebuilding-from-scratch">Rebuilding From Scratch</h2>
+<p>Thankfully, some of this information is well documented (but not easily found) over on Plex's website here!</p>
+<ol>
+<li>Moving an installation to another system: <a href="https://support.plex.tv/articles/201370363-move-an-install-to-another-system/">https://support.plex.tv/articles/201370363-move-an-install-to-another-system/</a></li>
+<li>Where is the Plex Media Server data directory? <a href="https://support.plex.tv/articles/202915258-where-is-the-plex-media-server-data-directory-located/">https://support.plex.tv/articles/202915258-where-is-the-plex-media-server-data-directory-located/</a></li>
+</ol>
+<h2 id="hardware-transcoding">Hardware Transcoding</h2>
 <p>If you would like to have Plex use a GPU that is attached to your DockSTARTer host, you can do this using an override like so:</p>
-<pre><code>devices:
-     - /dev/dri:/dev/dri
+<pre><code class="yaml">  plex:
+    devices:
+      - /dev/dri:/dev/dri
 </code></pre>
 
 <p>Refer to this forum post for details: <a href="https://forums.plex.tv/t/using-hardware-acceleration-in-docker/229702/3">Using Hardware Acceleration in Docker</a></p>

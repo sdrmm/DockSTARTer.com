@@ -91,6 +91,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#nextcloud" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -994,6 +998,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
     <a href="./" title="Nextcloud" class="md-nav__link md-nav__link--active">
       Nextcloud
@@ -1530,6 +1536,21 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -1538,12 +1559,11 @@
                   <a href="https://github.com/GhostWriters/DockSTARTer.com/edit/master/docs/apps/nextcloud.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Nextcloud</h1>
-                
-                <p>If you are running the DockSTARTer Nextcloud container behind a LetsEncrypt Reverse gateway, you may need to add a extra line to the NextCloud config.php file so it can find it.</p>
+                <h1 id="nextcloud">NextCloud</h1>
+<p>If you are running the DockSTARTer Nextcloud container behind a LetsEncrypt Reverse gateway, you may need to add a extra line to the NextCloud config.php file so it can find it.</p>
 <p>you will be able to access the web page all OK, but any apps may timeout or return an invalid password</p>
 <p>run the below command and add the line to the the config.php file before the );</p>
-<pre><code>nano /config/www/nextcloud/config/config.php
+<pre><code class="bash">nano /config/www/nextcloud/config/config.php
 
 'overwritehost' =&gt; 'hostname',
 </code></pre>

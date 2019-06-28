@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#netplan-setup" tabindex="1" class="md-skip">
+      <a href="#pihole" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -1094,6 +1094,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         PiHole
@@ -1106,6 +1108,8 @@
       
 <nav class="md-nav md-nav--secondary">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
@@ -1596,6 +1600,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -1654,11 +1660,10 @@
                   <a href="https://github.com/GhostWriters/DockSTARTer.com/edit/master/docs/apps/pihole.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>PiHole</h1>
-                
-                <p>Pi-hole takes over the local DNS service and may conflict with existing DNS services on your server. Ubuntu 18.04 currently uses systemd-resolv to server DNS and needs to be configured to either give up port 53 or be disabled.</p>
+                <h1 id="pihole">PiHole</h1>
+<p>Pi-hole takes over the local DNS service and may conflict with existing DNS services on your server. Ubuntu 18.04 currently uses systemd-resolv to server DNS and needs to be configured to either give up port 53 or be disabled.</p>
 <h2 id="netplan-setup">Netplan setup</h2>
-<p>On Ubuntu 18.04 and newer you will have <code>netplan</code> controlling your network and should see https://netplan.io/ for examples on how to configure it. You need to set your nameserver to use your LAN's DNS or a public DNS such as <code>1.1.1.1</code> before proceeding with any instructions below.</p>
+<p>On Ubuntu 18.04 and newer you will have <code>netplan</code> controlling your network and should see <a href="https://netplan.io/">https://netplan.io/</a> for examples on how to configure it. You need to set your nameserver to use your LAN's DNS or a public DNS such as <code>1.1.1.1</code> before proceeding with any instructions below.</p>
 <h2 id="resolvconf">Resolvconf</h2>
 <p>On Ubuntu 18.04, resolvconf was removed as the default means to control DNS.  In addition to the settings mentioned regarding netplan, we recommend setting up resolvconf.</p>
 <p>To install run <code>sudo apt install resolvconf</code></p>
@@ -1668,13 +1673,13 @@
 <p>Edit <code>/etc/systemd/resolved.conf</code> and set <code>DNSStubListener=no</code> (make sure it is not commented out with a <code>#</code> at the beginning of the line) and then run <code>sudo systemctl restart systemd-resolved</code></p>
 <p>If that does not work you can try the following:</p>
 <h2 id="stop-and-disable-systemd-resolv-only-if-the-above-does-not-work">Stop and disable systemd-resolv (only if the above does not work)</h2>
-<pre><code>sudo systemctl stop systemd-resolv.service
+<pre><code class="bash">sudo systemctl stop systemd-resolv.service
 sudo systemctl disable systemd-resolv.service
 </code></pre>
 
 <h2 id="name-resolution-for-localhost">Name resolution for localhost</h2>
 <p>In most cases it might be required to set your localhost name in <code>/etc/hosts</code></p>
-<pre><code>127.0.0.1    machinename.localhost    machinename
+<pre><code class="hosts">127.0.0.1    machinename.localhost    machinename
 127.0.0.1    domain.com
 </code></pre>
                 

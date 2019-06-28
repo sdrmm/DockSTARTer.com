@@ -336,22 +336,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#issueproblem" title="Issue/Problem:" class="md-nav__link">
-    Issue/Problem:
+  <a href="#issueproblem" title="Issue/Problem" class="md-nav__link">
+    Issue/Problem
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting-methods" title="Troubleshooting Methods:" class="md-nav__link">
-    Troubleshooting Methods:
+  <a href="#troubleshooting-methods" title="Troubleshooting Methods" class="md-nav__link">
+    Troubleshooting Methods
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resolutionssolutions" title="Resolutions/Solutions:" class="md-nav__link">
-    Resolutions/Solutions:
+  <a href="#resolutionssolutions" title="Resolutions/Solutions" class="md-nav__link">
+    Resolutions/Solutions
   </a>
   
 </li>
@@ -1593,22 +1593,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#issueproblem" title="Issue/Problem:" class="md-nav__link">
-    Issue/Problem:
+  <a href="#issueproblem" title="Issue/Problem" class="md-nav__link">
+    Issue/Problem
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting-methods" title="Troubleshooting Methods:" class="md-nav__link">
-    Troubleshooting Methods:
+  <a href="#troubleshooting-methods" title="Troubleshooting Methods" class="md-nav__link">
+    Troubleshooting Methods
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resolutionssolutions" title="Resolutions/Solutions:" class="md-nav__link">
-    Resolutions/Solutions:
+  <a href="#resolutionssolutions" title="Resolutions/Solutions" class="md-nav__link">
+    Resolutions/Solutions
   </a>
   
 </li>
@@ -1633,7 +1633,7 @@
                 
                 
                 <h1 id="port-conflicts">Port Conflicts</h1>
-<h2 id="issueproblem">Issue/Problem:</h2>
+<h2 id="issueproblem">Issue/Problem</h2>
 <p>During configuration the script exits with an error like the following:</p>
 <blockquote>
 <p>ERROR: for plex cannot start service plex: driver failed programming external connectivity on endpoint plex
@@ -1642,12 +1642,16 @@ ERROR: Encountered errors while bringing up the project.
 2019-02-13 17:38:19 [FATAL]      Docker Compose failed.</p>
 </blockquote>
 <p>This is due to another service that has occupied that port disallowing DockSTARTer from installing a service on that port.</p>
-<h2 id="troubleshooting-methods">Troubleshooting Methods:</h2>
+<h2 id="troubleshooting-methods">Troubleshooting Methods</h2>
 <p>As DockSTARTer will check and fail if another service is occupying the port, it is necessary to locate and deal with the conflict.</p>
 <p>One way is to locate the service currently occupying the port. You can do the following:</p>
-<p><em><code>sudo netstat -ltunp | grep -w ':&lt;port&gt;'</code>    example: <code>sudo netstat -ltunp | grep -w ':8080'</code></em></p>
+<pre><code class="bash"># sudo netstat -ltunp | grep -w ':&lt;port&gt;'
+## Example:
+sudo netstat -ltunp | grep -w ':8080'
+</code></pre>
+
 <p>Once you locate the offending service then you can choose what to do.</p>
-<h2 id="resolutionssolutions">Resolutions/Solutions:</h2>
+<h2 id="resolutionssolutions">Resolutions/Solutions</h2>
 <p><strong>Example:</strong> If you have avahi-daemon installed this will conflict with <em>udp/5353</em> port usage for iTunes in Plex if selected.  This will cause the script to exit with an [ERROR] and a [FATAL].</p>
 <p>One resolution is to change the port being bound during configuration.  During configuration change the external port exposed from <em>5353</em> to <em>5354 (or another unused port)</em>.  This will resolve the conflict.</p>
 <p>Another resolution would be to remove the software that is in conflict.  Again as the example above.  If you are not using mDNS resolution then avahi-daemon would be unnecessary. Simply remove the package with <em><code>apt remove avahi-daemon</code></em> from the base server. This will remove the offending service and allow the port to be used by the Docker service.</p>

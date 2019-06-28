@@ -1659,11 +1659,9 @@
 
 <ol>
 <li>Restart the Guacamole container so it creates <code>guacd.log</code> in <code>~/.config/appdata/guacamole/logs/</code></li>
-<li>Modify your docker-compose.override.yml in <code>~/.docker/compose/docker-compose.override.yml</code> file to mount the new log to letsencrypt<ol>
-<li>Example:</li>
+<li>Modify your docker-compose.override.yml in <code>~/.docker/compose/docker-compose.override.yml</code> file to mount the new log to letsencrypt</li>
 </ol>
-</li>
-</ol>
+<p>Example:</p>
 <pre><code class="yaml">  letsencrypt:
     volumes:
       - ${DOCKERCONFDIR}/guacamole/logs/:/var/log/guacamole/
@@ -1673,11 +1671,9 @@
 <ol>
 <li>Recreate your container by running <code>ds -c up</code></li>
 <li>Perform an invalid login attempt on Guacamole</li>
-<li>Check the new guacd.log file located in <code>~/.config/appdata/guacamole/logs</code> to verify the failed login attempt<ol>
-<li>Example:</li>
+<li>Check the new guacd.log file located in <code>~/.config/appdata/guacamole/logs</code> to verify the failed login attempt</li>
 </ol>
-</li>
-</ol>
+<p>Example:</p>
 <pre><code class="bash">grep -i nzbget ~/.config/appdata/guacamole/logs/guacd.log | grep failed
 15:03:17.762 [http-nio-8080-exec-1] WARN  o.a.g.r.auth.AuthenticationService - Authentication attempt from [x.x.x.x, x.x.x.x, x.x.x.x]
 for user &quot;nzbget&quot; failed.
@@ -1701,13 +1697,9 @@ ignoreip = 192.168.1.0/24
 To find your netmask run <code>ipconfig /all</code> on windows or <code>ifconfig | grep netmask</code> on linux.</p>
 <ol>
 <li>Next we are going to navigate to <code>~/.config/appdata/letsencrypt/fail2ban/filter.d</code> and in there you will see a file called <code>guacamole.conf</code>. We can't use this file because the regex in there will not work for our purposes.</li>
-<li>Open <code>guacamole.conf</code> with your favorite text editor as root and modify the regex line called <code>failregex</code> to match this:<ul>
-<li><code>\bAuthentication attempt from &lt;HOST&gt; for user "[^"]*" failed\.$</code></li>
-</ul>
-</li>
+<li>Open <code>guacamole.conf</code> with your favorite text editor as root and modify the regex line called <code>failregex</code> to match this: <code>\bAuthentication attempt from &lt;HOST&gt; for user "[^"]*" failed\.$</code></li>
 <li>Next save the file and name it <code>guacamole-auth.conf</code></li>
-<li>Perform an invalid login attempt and check fail2ban's regex for Guacamole with the following command:
-  <code>docker exec -it letsencrypt fail2ban-regex /var/log/guacamole/guacd.log /config/fail2ban/filter.d/guacamole-auth.conf</code></li>
+<li>Perform an invalid login attempt and check fail2ban's regex for Guacamole with the following command: <code>docker exec -it letsencrypt fail2ban-regex /var/log/guacamole/guacd.log /config/fail2ban/filter.d/guacamole-auth.conf</code></li>
 <li>If you want to ban yourself, you can comment out the <code>ignoreip</code> line on <code>jail.local</code>.</li>
 </ol>
 <p>BONUS: Want to see notifications when someone gets the hammer? Check out this cool <a href="https://technicalramblings.com/blog/adding-ban-unban-notifications-from-fail2ban-to-discord/">Discord guide</a> or this <a href="https://technicalramblings.com/blog/adding-ban-unban-notifications-from-fail2ban-with-pushover/">Pushover guide</a></p>

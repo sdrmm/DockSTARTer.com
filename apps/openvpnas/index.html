@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#setting-up-the-application" tabindex="1" class="md-skip">
+      <a href="#openvpnas" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -1046,6 +1046,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         OpenVPNAS
@@ -1058,6 +1060,8 @@
       
 <nav class="md-nav md-nav--secondary">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
@@ -1582,6 +1586,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -1626,16 +1632,17 @@
                   <a href="https://github.com/GhostWriters/DockSTARTer.com/edit/master/docs/apps/openvpnas.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>OpenVPNAS</h1>
-                
-                <p>Information pulled from <a href="https://hub.docker.com/r/linuxserver/openvpn-as/">Docker Hub</a> and edited for relevance.</p>
+                <h1 id="openvpnas">OpenVPNAS</h1>
+<p>Information pulled from <a href="https://hub.docker.com/r/linuxserver/openvpn-as/">Docker Hub</a> and edited for relevance.</p>
 <h2 id="setting-up-the-application">Setting up the application</h2>
-<p>The admin interface is available at https://<ip>:943/admin with a default user/password of admin/password</p>
+<p>The admin interface is available at <code>https://&lt;ip&gt;:943/admin</code> with a default user/password of admin/password</p>
 <p>During first login, make sure that the "Authentication" in the webui is set to "Local" instead of "PAM". Then set up the user accounts with their password (user accounts created under PAM do not survive container update or recreation).</p>
-<p>The "admin" account is a system (PAM) account and after container update or recreation, its password reverts back to the default. It is highly recommended to block this user's access for security reasons:
-1) Set another user as an admin,
-2) Delete the "admin" user in the gui,
-3) Modify the as.conf file under config/etc and replace the line boot_pam_users.0=admin with #boot_pam_users.0=admin (this only has to be done once and will survive container recreation)</p>
+<p>The "admin" account is a system (PAM) account and after container update or recreation, its password reverts back to the default. It is highly recommended to block this user's access for security reasons:</p>
+<ol>
+<li>Set another user as an admin,</li>
+<li>Delete the "admin" user in the gui,</li>
+<li>Modify the as.conf file under config/etc and replace the line boot_pam_users.0=admin with #boot_pam_users.0=admin (this only has to be done once and will survive container recreation)</li>
+</ol>
 <h2 id="server-network-settings">Server Network Settings</h2>
 <p>Make sure to change Hostname or IP Address to your public IP or public DNS name.  It defaults to the docker internal IP.  Also, and I think this goes without saying, make sure to forward the correct ports on your firewall to your host IP.</p>
 <h2 id="letsencrypt-subdomain-config">LetsEncrypt Subdomain Config</h2>

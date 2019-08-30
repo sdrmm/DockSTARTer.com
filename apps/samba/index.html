@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -183,7 +183,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -1308,29 +1308,21 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this-app-is-now-deprecated" title="THIS APP IS NOW DEPRECATED" class="md-nav__link">
-    THIS APP IS NOW DEPRECATED
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     Description
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#access-shares" title="Access Shares" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#access-shares" class="md-nav__link">
     Access Shares
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#related" title="Related" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
     Related
   </a>
   
@@ -1338,14 +1330,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mounting-windows-share-in-linux" title="Mounting Windows share in Linux" class="md-nav__link">
+  <a href="#mounting-windows-share-in-linux" class="md-nav__link">
     Mounting Windows share in Linux
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1619,29 +1606,21 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this-app-is-now-deprecated" title="THIS APP IS NOW DEPRECATED" class="md-nav__link">
-    THIS APP IS NOW DEPRECATED
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     Description
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#access-shares" title="Access Shares" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#access-shares" class="md-nav__link">
     Access Shares
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#related" title="Related" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
     Related
   </a>
   
@@ -1649,14 +1628,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mounting-windows-share-in-linux" title="Mounting Windows share in Linux" class="md-nav__link">
+  <a href="#mounting-windows-share-in-linux" class="md-nav__link">
     Mounting Windows share in Linux
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1685,23 +1659,16 @@
                 
                 
                 <h1 id="samba">Samba</h1>
-<h2 id="this-app-is-now-deprecated">THIS APP IS NOW DEPRECATED</h2>
-<h3 id="description">Description</h3>
+<h2 id="description">Description</h2>
 <p>Samba is using the <code>SMB</code> protocol to share Linux mounts, which then are accessible and mountable on e.g. a Windows computer.</p>
-<p>By default, Samba will share all media directories and Docker config directory over SMB on the host. These shares are protected with username <code>DockSTARTer</code> and password <code>DockSTARTer</code>.</p>
-<h3 id="access-shares">Access Shares</h3>
+<p>By default, Samba will share all media directories and Docker config directory over SMB on the host. These shares are protected with username <code>ds</code> and password <code>ds</code>.</p>
+<h2 id="access-shares">Access Shares</h2>
 <p>Replace <code>host</code> with your DNS or IP-address of your Docker host.</p>
 <ul>
-<li><code>\\host\Docker Config</code></li>
-<li><code>\\host\Downloads</code></li>
-<li><code>\\host\Comics</code></li>
-<li><code>\\host\Books</code></li>
-<li><code>\\host\Movies</code></li>
-<li><code>\\host\Music</code></li>
-<li><code>\\host\TV</code></li>
+<li><code>\\host\DockSTARTer</code></li>
 </ul>
-<h3 id="related">Related</h3>
-<h4 id="mounting-windows-share-in-linux">Mounting Windows share in Linux</h4>
+<h2 id="related">Related</h2>
+<h3 id="mounting-windows-share-in-linux">Mounting Windows share in Linux</h3>
 <p>See <a href="https://dockstarter.com/advanced/smb-mounting/">SMB Mounting</a>.</p>
                 
                   

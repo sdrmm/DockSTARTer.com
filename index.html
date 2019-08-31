@@ -1653,9 +1653,20 @@
 </ul>
 <h3 id="one-time-setup-required">One Time Setup (required)</h3>
 <ul>
-<li>APT Systems (<a href="https://docs.docker.com/install/linux/docker-ce/debian/#os-requirements">Debian</a>, <a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/#os-requirements">Ubuntu</a>, Raspbian, etc)</li>
+<li>APT Systems (<a href="https://docs.docker.com/install/linux/docker-ce/debian/#os-requirements">Debian</a>, <a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/#os-requirements">Ubuntu</a>, etc)</li>
 </ul>
 <pre><code class="bash">sudo apt-get install curl git
+bash -c &quot;$(curl -fsSL https://get.dockstarter.com)&quot;
+sudo reboot
+</code></pre>
+
+<blockquote>
+<p>Requires a few extra commands</p>
+</blockquote>
+<pre><code class="bash">sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get install curl git
+bash -c &quot;$(curl -fsSL https://get.docker.com)&quot;
 bash -c &quot;$(curl -fsSL https://get.dockstarter.com)&quot;
 sudo reboot
 </code></pre>

@@ -617,9 +617,38 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        DDClient
+      </label>
+    
     <a href="./" title="DDClient" class="md-nav__link md-nav__link--active">
       DDClient
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ddclient-install" class="md-nav__link">
+    Ddclient Install
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1558,6 +1587,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ddclient-install" class="md-nav__link">
+    Ddclient Install
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1571,7 +1616,10 @@
                   <a href="https://github.com/GhostWriters/DockSTARTer.com/edit/master/docs/apps/ddclient.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="ddclient">DDClient</h1>
+                <h1 id="ddclient">Ddclient</h1>
+<p><a href="https://sourceforge.net/p/ddclient/wiki/Home/">DDclient</a> is a Perl client used to update dynamic DNS entries for accounts on a Dynamic DNS Network Service Provider. It was originally written by Paul Burry and is now mostly by wimpunk. It has the capability to update more than just dyndns and it can fetch your WAN-ipaddress in a few different ways.</p>
+<p>The GIT Repository for Ddclient is located at <a href="https://github.com/linuxserver/docker-ddclient">https://github.com/linuxserver/docker-ddclient</a>.</p>
+<h2 id="ddclient-install">Ddclient Install</h2>
 <p>Edit the included config to uncomment this line:</p>
 <pre><code class="ini">use=web, web=checkip.dyndns.org/, web-skip='IP Address' # found after IP Address
 </code></pre>

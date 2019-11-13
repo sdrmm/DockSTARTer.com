@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#letsencrypt" tabindex="1" class="md-skip">
+      <a href="#lets-encrypt" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -912,8 +912,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#linuxservers-nginxletsencrypt-starter-guide" class="md-nav__link">
-    LinuxServer's NGINX/LetsEncrypt Starter Guide
+  <a href="#linuxservers-nginxlets-encrypt-starter-guide" class="md-nav__link">
+    LinuxServer's NGINX/Let's Encrypt Starter Guide
   </a>
   
 </li>
@@ -1643,8 +1643,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#linuxservers-nginxletsencrypt-starter-guide" class="md-nav__link">
-    LinuxServer's NGINX/LetsEncrypt Starter Guide
+  <a href="#linuxservers-nginxlets-encrypt-starter-guide" class="md-nav__link">
+    LinuxServer's NGINX/Let's Encrypt Starter Guide
   </a>
   
 </li>
@@ -1696,11 +1696,13 @@
                   <a href="https://github.com/GhostWriters/DockSTARTer.com/edit/master/docs/apps/letsencrypt.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="letsencrypt">LetsEncrypt</h1>
-<h2 id="linuxservers-nginxletsencrypt-starter-guide">LinuxServer's NGINX/LetsEncrypt Starter Guide</h2>
-<p>If this is your first time learning about NGINX and LetsEncrypt, we highly recommend you read over their official guide, which can be found <a href="https://blog.linuxserver.io/2019/04/25/letsencrypt-nginx-starter-guide/">here</a></p>
+                <h1 id="lets-encrypt">Let's Encrypt</h1>
+<p><a href="https://letsencrypt.org/">Let's Encrypt</a> sets up an Nginx webserver and reverse proxy with php support and a built-in letsencrypt client that automates free SSL server certificate generation and renewal processes. It also contains fail2ban for intrusion prevention.</p>
+<p>The GIT Repository for Let's Encrypt is located at <a href="https://github.com/linuxserver/docker-letsencrypt">https://github.com/linuxserver/docker-letsencrypt</a>.</p>
+<h2 id="linuxservers-nginxlets-encrypt-starter-guide">LinuxServer's NGINX/Let's Encrypt Starter Guide</h2>
+<p>If this is your first time learning about NGINX and Let's Encrypt, we highly recommend you read over their official guide, which can be found <a href="https://blog.linuxserver.io/2019/04/25/letsencrypt-nginx-starter-guide/">here</a></p>
 <h2 id="general-setup">General Setup</h2>
-<p>Out of the box, the LetsEncrypt container created by <a href="https://www.linuxserver.io/">linuxserver.io</a> performs reverse proxy functions using <a href="https://www.nginx.com/">NGINX</a> and automatic https encrypted connections using certificates provided by <a href="https://letsencrypt.org/">LetsEncrypt</a>. More on this container can be found <a href="https://hub.docker.com/r/linuxserver/letsencrypt/">here</a>.</p>
+<p>Out of the box, the Let's Encrypt container created by <a href="https://www.linuxserver.io/">linuxserver.io</a> performs reverse proxy functions using <a href="https://www.nginx.com/">NGINX</a> and automatic https encrypted connections using certificates provided by <a href="https://letsencrypt.org/">LetsEncrypt</a>. More on this container can be found <a href="https://hub.docker.com/r/linuxserver/letsencrypt/">here</a>.</p>
 <p>To configure your reverse proxy, consider if you want to use subfolders (ie. domain.com/portainer) or subdomains (ie. portainer.domain.com). Subdomains will take more configuration, as DNS entries and certificate subject alternate names are required.</p>
 <p>The first thing to setup is your domain and email settings in <code>.docker/compose/.env</code> under LETSENCRYPT. Set the <code>LETSENCRYPT_EMAIL</code> and <code>LETSENCRYPT_URL</code>. If using subdomains ensure to add each subdomain to <code>LETSENCRYPT_SUBDOMAINS</code> as each subdomain prefix (ie. <code>LETSENCRYPT_SUBDOMAINS=portainer,deluge,pihole</code>.</p>
 <p>There are a number of sample proxy configuration files found in <code>~/.config/appdata/letsencrypt/nginx/proxy-confs/</code> and in most cases will just need the .sample removed from the filename. Currently not every applicable app has an example configuration and are still being tested.</p>

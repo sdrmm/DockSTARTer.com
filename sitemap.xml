@@ -131,6 +131,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://dockstarter.com/apps/dasshio/</loc>
+     <lastmod>2019-11-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://dockstarter.com/apps/ddclient/</loc>
      <lastmod>2019-11-13</lastmod>
      <changefreq>daily</changefreq>
@@ -157,6 +162,11 @@
     </url>
     <url>
      <loc>https://dockstarter.com/apps/emby/</loc>
+     <lastmod>2019-11-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://dockstarter.com/apps/filebot/</loc>
      <lastmod>2019-11-13</lastmod>
      <changefreq>daily</changefreq>
     </url>

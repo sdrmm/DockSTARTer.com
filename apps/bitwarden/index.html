@@ -533,9 +533,38 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Bitwarden
+      </label>
+    
     <a href="./" title="Bitwarden" class="md-nav__link md-nav__link--active">
       Bitwarden
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bitwarden-install" class="md-nav__link">
+    Bitwarden Install
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -618,6 +647,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../dasshio/" title="Dasshio" class="md-nav__link">
+      Dasshio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../ddclient/" title="DDClient" class="md-nav__link">
       DDClient
     </a>
@@ -680,6 +721,18 @@
   <li class="md-nav__item">
     <a href="../emby/" title="Emby" class="md-nav__link">
       Emby
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filebot/" title="Filebot" class="md-nav__link">
+      Filebot
     </a>
   </li>
 
@@ -1558,6 +1611,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bitwarden-install" class="md-nav__link">
+    Bitwarden Install
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1574,7 +1643,7 @@
                 <h1 id="bitwarden">Bitwarden</h1>
 <p><a href="https://bitwarden.com/">Bitwarden</a> is a free and open-source password management service that stores sensitive information such as website credentials in an encrypted vault. This is a Bitwarden server API implementation written in Rust compatible with <a href="https://bitwarden.com/#download">upstream Bitwarden clients</a>, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.</p>
 <p>The GIT Repository for Bitwarden is located at <a href="https://github.com/dani-garcia/bitwarden_rs">https://github.com/dani-garcia/bitwarden_rs</a></p>
-<p>Bitwarden Install</p>
+<h2 id="bitwarden-install">Bitwarden Install</h2>
 <p>When installing the Bitwarden container, the installer will install under Appdata directory as the root user, however once it is installed you can change the owner/group of it to whatever is required</p>
 <p>Run the below command (from a terminal) to change the permissions if required.</p>
 <p><code>sudo chown -R owner:group ~/.config/appdata/bitwarden</code></p>

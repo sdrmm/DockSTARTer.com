@@ -917,9 +917,38 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Logarr
+      </label>
+    
     <a href="./" title="Logarr" class="md-nav__link md-nav__link--active">
       Logarr
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#logarr-configuration" class="md-nav__link">
+    Logarr Configuration
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1582,6 +1611,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#logarr-configuration" class="md-nav__link">
+    Logarr Configuration
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1596,6 +1641,9 @@
                 
                 
                 <h1 id="logarr">Logarr</h1>
+<p>Logarr is a Self-hosted, single-page, log consolidation tool written in PHP</p>
+<p>The GIT Repository for Logarr is located at <a href="https://github.com/Monitorr/logarr">https://github.com/Monitorr/logarr</a>.</p>
+<h2 id="logarr-configuration">Logarr Configuration</h2>
 <p>Logarr configuration has sharing to the logs enabled by default. From within the Logarr container, this is accessible via the <code>/var/log/logarrlogs</code> path. Which is mapped to your <code>~/.config/appdata</code> path of your host machine.</p>
 <p>For Logarr you will need to edit the <code>config.php</code> file to point to the correct log files. This file is located in the <code>~/.config/appdata/logarr/www/logarr/assets/</code> folder of your host machine.</p>
 <p>Edit the included config to change these lines:</p>

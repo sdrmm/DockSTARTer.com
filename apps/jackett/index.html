@@ -91,6 +91,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#jackett" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -850,6 +854,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
     <a href="./" title="Jackett" class="md-nav__link md-nav__link--active">
       Jackett
@@ -1566,6 +1572,21 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -1574,9 +1595,9 @@
                   <a href="https://github.com/GhostWriters/DockSTARTer.com/edit/master/docs/apps/jackett.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Jackett</h1>
-                
-                <p>Placeholder page for Jackett</p>
+                <h1 id="jackett">Jackett</h1>
+<p><a href="https://github.com/Jackett/Jackett">Jackett</a> works as a proxy server: it translates queries from apps (Sonarr, SickRage, CouchPotato, Mylar, etc) into tracker-site-specific http queries, parses the html response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches. Jackett is a single repository of maintained indexer scraping &amp; translation logic - removing the burden from other apps.</p>
+<p>The GIT Repository for Jackett is located at <a href="https://github.com/linuxserver/docker-jackett">https://github.com/linuxserver/docker-jackett</a>.</p>
                 
                   
                 

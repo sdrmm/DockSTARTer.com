@@ -1277,9 +1277,38 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        rTorrentVPN
+      </label>
+    
     <a href="./" title="rTorrentVPN" class="md-nav__link md-nav__link--active">
       rTorrentVPN
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rtorrentvpn-webui-access" class="md-nav__link">
+    rTorrentVPN WebUI Access
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1582,6 +1611,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rtorrentvpn-webui-access" class="md-nav__link">
+    rTorrentVPN WebUI Access
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1599,6 +1644,21 @@
 <p><a href="http://deluge-torrent.org/">rTorrentVPN</a> is a Docker build script for Arch Linux base with <a href="https://github.com/pyroscope/rtorrent-ps">rTorrent-ps</a>, <a href="https://github.com/Novik/ruTorrent">ruTorrent</a>, <a href="https://github.com/autodl-community/autodl-irssi">autodl-irssi</a>, <a href="https://openvpn.net/">OpenVPN</a> and <a href="http://www.privoxy.org/">Privoxy</a> all included in one image.</p>
 <p>The support forum for rTorrentVPN is located at <a href="https://forums.unraid.net/topic/46127-support-binhex-rtorrentvpn/">https://forums.unraid.net/topic/46127-support-binhex-rtorrentvpn/</a>.</p>
 <p>The GIT Repository for rTorrentVPN is located at <a href="https://github.com/binhex/arch-rtorrentvpn">https://github.com/binhex/arch-rtorrentvpn</a>.</p>
+<h2 id="rtorrentvpn-webui-access">rTorrentVPN WebUI Access</h2>
+<p>If you're attempting to get access to the rTorrentVPN WebUI remotely outside of your home network, you are going to have to do this through a Proxy using LetsEncrypt. Full details and steps are outlined here <a href="https://dockstarter.com/advanced/vpn-info/">VPN Information</a>.</p>
+<p>The sample proxy configuration files found in <code>.docker/config/letsencrypt/nginx/proxy-confs/</code> will need to be modified and as usual, have the .sample removed from the filename.</p>
+<p>You will need to edit the appropriate proxy <code>.conf</code>. Enter either <code>sudo nano rutorrent.subfolder.conf</code> or <code>sudo nano rutorrent.subdomain.conf</code> depending on your configuration desires and change the below lines. NOTE: There will be multiple lines that need to be changed.</p>
+<p>Original</p>
+<pre><code class="nginx">   set $upstream_rutorrent rutorrent;
+   proxy_pass http://$upstream_rutorrent:80;
+</code></pre>
+
+<p>Modified</p>
+<pre><code class="nginx">   set $upstream_rutorrent rtorrentvpn;
+   proxy_pass http://$upstream_rutorrent:9080;
+</code></pre>
+
+<p>Save the file out and then restart your containers with a <code>ds -c</code> command.</p>
                 
                   
                 
